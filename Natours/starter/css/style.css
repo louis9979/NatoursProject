@@ -40,6 +40,11 @@ body {
 
 .logo {
   height: 35px;
+  animation: logoSpin 4s;
+}
+
+.logo:hover {
+  animation: logoSpinH 3s;
 }
 
 .heading-text-box {
@@ -47,12 +52,14 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .primary-heading {
   color: #ffffff;
   text-transform: uppercase;
   backface-visibility: hidden;
+  margin-bottom: 60px;
 }
 
 .primary-heading-main {
@@ -86,10 +93,6 @@ body {
     transform: translateX(-350px) rotate(180deg);
   }
 
-  60% {
-    transform: rotate(180deg);
-  }
-
   80% {
     transform: translateX(15px);
   }
@@ -114,4 +117,93 @@ body {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+@keyframes MoveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(99px);
+  }
+
+  80% {
+    transform: translateY(-7px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes logoSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes logoSpinH {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 300px;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #777;
+}
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.9s;
+}
+
+.btn-white::after {
+  background-color: #ffffff;
+}
+
+.btn:hover::after {
+  transform: scaleX(2.5) scaleY(1.9);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: MoveInButton 1s ease-out 1.8s;
+  animation-fill-mode: backwards;
 }
