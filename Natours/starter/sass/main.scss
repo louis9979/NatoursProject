@@ -1,0 +1,222 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+$color-primary: #28b485;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #55c57a;
+
+* *::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'lato', sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+
+  box-sizing: border-box;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+  animation: logoSpin 4s;
+}
+
+.header__logo:hover {
+  animation: logoSpinH 3s;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.primary-heading {
+  color: #ffffff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+.primary-heading--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+
+  animation-name: MoveInLeft;
+  animation-duration: 2.8s;
+  animation-timing-function: ease-in;
+
+  /*  
+  animation-delay: 0.5;
+  animation-iteration-count: 3;
+  */
+}
+
+.primary-heading--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+
+  animation: MoveInRight 2.2s ease-in;
+}
+
+@keyframes MoveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-3.5rem) rotate(180deg);
+  }
+
+  80% {
+    transform: translateX(1.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes MoveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(3.5rem);
+  }
+
+  80% {
+    transform: translateX(-1.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes MoveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(9.9rem);
+  }
+
+  80% {
+    transform: translateY(-0.7rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes logoSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes logoSpinH {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 30rem;
+  transition: all 0.5s;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.btn--white {
+  background-color: #ffffff;
+  color: #777;
+}
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 30rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.9s;
+}
+
+.btn--white::after {
+  background-color: #ffffff;
+}
+
+.btn:hover::after {
+  transform: scaleX(2.5) scaleY(1.9);
+  opacity: 0;
+}
+
+.btn--animated {
+  animation: MoveInButton 1s ease-out 1.8s;
+  animation-fill-mode: backwards;
+}
