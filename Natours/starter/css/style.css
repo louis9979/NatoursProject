@@ -191,7 +191,7 @@ body {
     border-radius: 8px;
     position: absolute;
     z-index: 1;
-    transition: 0.5s;
+    transition: 0.4s;
     outline-offset: 2rem; }
     .composition__photo--p1 {
       left: 0;
