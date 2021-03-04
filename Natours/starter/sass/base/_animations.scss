@@ -1,0 +1,67 @@
+@keyframes MoveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-3.5rem) rotate(180deg);
+  }
+
+  80% {
+    transform: translateX(1.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes MoveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(3.5rem);
+  }
+
+  80% {
+    transform: translateX(-1.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes MoveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(9.9rem);
+  }
+
+  80% {
+    transform: translateY(-0.7rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes logoSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes logoSpinH {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
