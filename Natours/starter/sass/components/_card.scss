@@ -1,34 +1,170 @@
 .card {
-  perspective: 150rem;
+  perspective: 1500rem;
   -moz-perspective: 150rem;
+  position: relative;
+  height: 54rem;
 
   &-side {
-    background-color: orangered;
     font-size: 2.5rem;
     font-weight: bolder;
-    color: blue;
-    height: 50rem;
-    transition: all 1.2s;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.6);
-  }
+    color: $color-grey-dark;
 
-  &--front {
-    font-size: 2.5rem;
-    font-weight: bolder;
-    color: blue;
-  }
+    height: 54rem;
+    transition: all 1.4s ease;
 
-  &--back {
-    transform: rotateY(180deg);
-  }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
 
+    &--front {
+      font-size: 2.5rem;
+      font-weight: bolder;
+      color: $color-grey-dark;
+      background-color: $color-white;
+    }
+
+    &-1--front {
+      box-shadow: 0 4.5rem 8rem rgba($color-secondary-dark, 0.8);
+    }
+
+    &-2--front {
+      box-shadow: 0 4.5rem 8rem rgba($color-primary-dark, 0.8);
+    }
+
+    &-3--front {
+      box-shadow: 0 4.5rem 8rem rgba($color-third-dark, 0.8);
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-primary-dark);
+      }
+
+      &-2 {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-third-dark);
+      }
+
+      &-3 {
+        background-image: linear-gradient(to right bottom, $color-third-light, $color-secondary-dark);
+      }
+    }
+  }
   &:hover &-side--front {
-    transform: rotateY(180deg) scale(1.2);
-    box-shadow: 0 4.5rem 8rem rgba($color-primary-dark, 0.6);
+    transform: rotateY(-180deg);
+    box-shadow: 0 4.5rem 4rem rgba($color-primary-dark, 0.6);
   }
 
   &:hover &-side--back {
-    transform: rotateY(180deg) scale(1.4);
-    box-shadow: 0 4.5rem 8rem rgba($color-primary-dark, 0.6);
+    transform: rotateY(0deg) scale(1.2);
+
+    &-1 {
+      box-shadow: 0 4.5rem 8rem rgba($color-secondary-dark, 0.4);
+    }
+
+    &-2 {
+      box-shadow: 0 4.5rem 8rem rgba($color-primary-dark, 0.4);
+    }
+
+    &-3 {
+      box-shadow: 0 4.5rem 8rem rgba($color-third-dark, 0.4);
+    }
+  }
+
+  &-picture {
+    background-size: cover;
+    height: 230px;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+        url(../img/nat-5.jpg);
+    }
+
+    &--2 {
+      background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+        url(../img/nat-6.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right bottom, $color-third-light, $color-third-dark), url(../img/nat-7.jpg);
+    }
+  }
+
+  &-heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 95px;
+    right: 20px;
+    width: 64%;
+  }
+
+  &-heading-span {
+    &--1 {
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      padding: 0.7rem 1rem;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.8),
+        rgba($color-secondary-dark, 0.8)
+      );
+    }
+  }
+
+  &-details {
+    padding: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      padding-inline-start: 0;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1.5rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+  }
+
+  &-cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &-price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: $color-white;
+  }
+
+  &-price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &-price-value {
+    font-size: 6rem;
+    font-weight: 200;
   }
 }
