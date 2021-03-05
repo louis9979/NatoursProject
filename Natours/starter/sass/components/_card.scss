@@ -1,4 +1,34 @@
 .card {
-  background-color: orangered;
-  height: 50rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+
+  &-side {
+    background-color: orangered;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: blue;
+    height: 50rem;
+    transition: all 1.2s;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.6);
+  }
+
+  &--front {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: blue;
+  }
+
+  &--back {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &-side--front {
+    transform: rotateY(180deg) scale(1.2);
+    box-shadow: 0 4.5rem 8rem rgba($color-primary-dark, 0.6);
+  }
+
+  &:hover &-side--back {
+    transform: rotateY(180deg) scale(1.4);
+    box-shadow: 0 4.5rem 8rem rgba($color-primary-dark, 0.6);
+  }
 }
