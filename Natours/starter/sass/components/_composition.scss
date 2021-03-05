@@ -1,7 +1,7 @@
 .composition {
   position: relative;
 
-  &__photo {
+  &-photo {
     width: 70%;
     box-shadow: 0 1.5rem 4rem rgba($color-grey-dark, 0.4);
     border-radius: 8px;
@@ -32,7 +32,7 @@
       z-index: 2;
     }
   }
-  &:hover &__photo:not(:hover) {
+  &:hover &-photo:not(:hover) {
     transform: scale(0.95);
   }
 }

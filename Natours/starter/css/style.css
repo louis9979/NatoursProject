@@ -185,7 +185,7 @@ body {
 
 .composition {
   position: relative; }
-  .composition__photo {
+  .composition-photo {
     width: 70%;
     box-shadow: 0 1.5rem 4rem rgba(119, 119, 119, 0.4);
     border-radius: 8px;
@@ -193,22 +193,30 @@ body {
     z-index: 1;
     transition: 0.4s;
     outline-offset: 2rem; }
-    .composition__photo--p1 {
+    .composition-photo--p1 {
       left: 0;
       top: -1rem; }
-    .composition__photo--p2 {
+    .composition-photo--p2 {
       right: -19%;
       top: 6rem; }
-    .composition__photo--p3 {
+    .composition-photo--p3 {
       left: 20%;
       top: 19rem; }
-    .composition__photo:hover {
+    .composition-photo:hover {
       outline: 1.5rem solid #28b485;
       transform: scale(1.2) translateY(5px);
       box-shadow: 0 3.5rem 8rem rgba(119, 119, 119, 0.65);
       z-index: 2; }
-  .composition:hover .composition__photo:not(:hover) {
+  .composition:hover .composition-photo:not(:hover) {
     transform: scale(0.95); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
 
 .row {
   max-width: 114rem;
@@ -244,16 +252,16 @@ body {
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header__logo-box {
+  .header-logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem; }
-  .header__logo {
+  .header-logo {
     height: 3.5rem;
     animation: logoSpin 3.5s; }
-  .header__logo:hover {
+  .header-logo:hover {
     animation: logoSpinH 3.5s; }
-  .header__text-box {
+  .header-text-box {
     position: absolute;
     top: 40%;
     left: 50%;

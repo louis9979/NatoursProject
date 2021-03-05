@@ -8,21 +8,21 @@
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
-  &__logo-box {
+  &-logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
   }
-  &__logo {
+  &-logo {
     height: 3.5rem;
     animation: logoSpin 3.5s;
   }
 
-  &__logo:hover {
+  &-logo:hover {
     animation: logoSpinH 3.5s;
   }
 
-  &__text-box {
+  &-text-box {
     position: absolute;
     top: 40%;
     left: 50%;
