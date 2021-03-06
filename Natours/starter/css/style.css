@@ -142,7 +142,7 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -150,7 +150,9 @@ body {
   border-radius: 30rem;
   transition: all 0.3s;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-4px);
@@ -159,9 +161,10 @@ body {
     transform: scaleX(2.5) scaleY(1.9);
     opacity: 0; }
 
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translateY(-1px); }
-  .btn:active-btn--green {
+  .btn:active-btn--green, .btn:focus-btn--green {
     box-shadow: 0 0.3rem 1rem rgba(40, 180, 133, 0.3); }
 
 .btn--white {
@@ -537,6 +540,45 @@ body {
   visibility: hidden;
   transform: translateY(-4rem); }
 
+.form-radio-input {
+  display: none; }
+
+.form-radio-group {
+  width: 38%;
+  display: inline-block; }
+
+.form-radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 5rem; }
+
+.form-radio-button {
+  height: 2rem;
+  width: 2rem;
+  border: 5px solid #28b485;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.5rem; }
+  .form-radio-button::after {
+    content: '';
+    display: block;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28b485;
+    opacity: 0;
+    transition: opacity 0.1s; }
+
+.form-radio-input:checked ~ .form-radio-label .form-radio-button:after {
+  opacity: 1; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -622,7 +664,7 @@ body {
   background-size: cover;
   border-radius: 15px;
   box-shadow: 0 2.5rem 8rem rgba(0, 0, 0, 0.6);
-  height: 50rem; }
+  height: 55rem; }
   .booking-form {
     width: 50%;
     padding: 6rem; }
