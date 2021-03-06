@@ -11,45 +11,25 @@
   &-icon {
     font-size: 6rem;
     margin-bottom: 0.5rem;
-    display: inline-block;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to right, $color-primary-light, $color-third-dark);
+    @include feature-box;
   }
 
   &:hover {
     transform: translateY(-1.7rem) scale(1.09);
   }
   &-text {
-    display: inline-block;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to right, $color-grey-dark, $color-primary-dark);
+    @include feature-box;
   }
 
   &-text-2 {
-    display: inline-block;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to right, $color-primary-dark, $color-black);
+    @include feature-box;
   }
 
   &-text-3 {
-    display: inline-block;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to right, $color-black, $color-primary-dark);
+    @include feature-box;
   }
 
   &-text-4 {
-    display: inline-block;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to left, $color-grey-dark, $color-primary-dark);
+    @include feature-box;
   }
 }

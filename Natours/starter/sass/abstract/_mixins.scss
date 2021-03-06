@@ -5,3 +5,27 @@
     clear: both;
   }
 }
+
+@mixin feature-box {
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, $color-grey-dark, $color-primary-dark);
+
+  &-2 {
+    background-image: linear-gradient(to right, $color-primary-dark, $color-black);
+  }
+
+  &-3 {
+    background-image: linear-gradient(to right, $color-black, $color-primary-dark);
+  }
+
+  &-4 {
+    background-image: linear-gradient(to left, $color-grey-dark, $color-primary-dark);
+  }
+
+  &-icon {
+    background-image: linear-gradient(to right, $color-primary-light, $color-third-dark);
+  }
+}

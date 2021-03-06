@@ -291,7 +291,7 @@ body {
       color: #777;
       background-color: #fff; }
     .card-side-1--front {
-      box-shadow: 0 4.5rem 8rem rgba(255, 119, 48, 0.8); }
+      box-shadow: 0 2.5rem 3rem rgba(255, 119, 48, 0.8), 0 4.5rem 8rem rgba(85, 197, 122, 0.8); }
     .card-side-2--front {
       box-shadow: 0 4.5rem 8rem rgba(85, 197, 122, 0.8); }
     .card-side-3--front {
