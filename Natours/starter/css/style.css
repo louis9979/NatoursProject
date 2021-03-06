@@ -402,11 +402,31 @@ body {
     shape-outside: circle(35% at 50% 50%);
     -webkit-clip-path: circle(40% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg); }
-  .story-image {
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative; }
+  .story-img {
+    position: fixed;
     height: 100%;
+    left: -38px;
+    transform: scale(1.2);
+    transition: all 0.8s; }
+  .story-caption {
     position: absolute;
-    left: -38px; }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.8s; }
+  .story:hover .story-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story-img {
+    transform: scale(1);
+    filter: blur(3px) brightness(87%) hue-rotate(50deg); }
 
 .row {
   max-width: 114rem;
