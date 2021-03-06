@@ -121,10 +121,32 @@
         rgba($color-secondary-dark, 0.8)
       );
     }
+
+    &--2 {
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      padding: 0.7rem 1rem;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      );
+    }
+
+    &--3 {
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      padding: 0.7rem 1rem;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-third-light, 0.8),
+        rgba($color-secondary-dark, 0.8)
+      );
+    }
   }
 
   &-details {
-    padding: 3rem;
+    padding: 2rem;
     ul {
       list-style: none;
       width: 80%;
