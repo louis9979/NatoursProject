@@ -88,7 +88,7 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #7ed56f, #55c57a);
+  background-image: linear-gradient(to right, #2998ff, #5643fa);
   display: inline-block;
   -webkit-background-clip: text;
   background-clip: text;
@@ -201,11 +201,11 @@ body {
   .composition-photo {
     width: 70%;
     box-shadow: 0 1.5rem 4rem rgba(119, 119, 119, 0.4);
-    border-radius: 8px;
+    border-radius: 15px;
     position: absolute;
     z-index: 1;
     transition: 0.4s;
-    outline-offset: 2rem; }
+    outline-offset: 1rem; }
     .composition-photo--p1 {
       left: 0;
       top: -1rem; }
@@ -216,7 +216,7 @@ body {
       left: 20%;
       top: 19rem; }
     .composition-photo:hover {
-      outline: 1.5rem solid #28b485;
+      outline: 0.8rem solid #28b485;
       transform: scale(1.2) translateY(5px);
       box-shadow: 0 3.5rem 8rem rgba(119, 119, 119, 0.65);
       z-index: 2; }
@@ -229,7 +229,7 @@ body {
   color: orangered;
   padding: 2.5rem;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 15px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: all 0.5s; }
   .feature-box-icon {
@@ -239,7 +239,7 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to right, #7ed56f, #55c57a); }
+    background-image: linear-gradient(to right, #7ed56f, #5643fa); }
   .feature-box:hover {
     transform: translateY(-1.7rem) scale(1.09); }
   .feature-box-text {
@@ -383,6 +383,14 @@ body {
     font-size: 6rem;
     font-weight: 200; }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 6rem; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -412,7 +420,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(85, 197, 122, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(85, 197, 122, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -442,7 +450,7 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(85, 197, 122, 0.8)), url(../img/nat-4.jpg);
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(255, 119, 48, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: 20rem; }
@@ -452,3 +460,7 @@ body {
 .section-tours {
   background-color: #f7f7f7;
   padding: 25rem -15rem; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }
