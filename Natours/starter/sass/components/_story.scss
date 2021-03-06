@@ -5,4 +5,27 @@
   background-color: $color-white;
   border-radius: 15px;
   padding: 6rem;
+  padding-left: 9rem;
+  font-size: $defult-font-size;
+  transform: skewX(-12deg);
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  &-shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(35% at 50% 50%);
+    -webkit-clip-path: circle(40% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+  }
+
+  &-image {
+    height: 100%;
+    position: absolute;
+    left: -38px;
+  }
 }
