@@ -52,6 +52,6 @@
 
   &:hover &-img {
     transform: scale(1);
-    filter: blur(3px) brightness(87%) hue-rotate(50deg);
+    filter: blur(3px) brightness(87%) sepia(40%);
   }
 }

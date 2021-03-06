@@ -239,7 +239,15 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to right, #7ed56f, #5643fa); }
+    background-image: linear-gradient(to right, #777, #55c57a); }
+    .feature-box-icon-2 {
+      background-image: linear-gradient(to right, #55c57a, #000); }
+    .feature-box-icon-3 {
+      background-image: linear-gradient(to right, #000, #55c57a); }
+    .feature-box-icon-4 {
+      background-image: linear-gradient(to left, #777, #55c57a); }
+    .feature-box-icon-icon {
+      background-image: linear-gradient(to right, #7ed56f, #5643fa); }
   .feature-box:hover {
     transform: translateY(-1.7rem) scale(1.09); }
   .feature-box-text {
@@ -248,24 +256,56 @@ body {
     background-clip: text;
     color: transparent;
     background-image: linear-gradient(to right, #777, #55c57a); }
+    .feature-box-text-2 {
+      background-image: linear-gradient(to right, #55c57a, #000); }
+    .feature-box-text-3 {
+      background-image: linear-gradient(to right, #000, #55c57a); }
+    .feature-box-text-4 {
+      background-image: linear-gradient(to left, #777, #55c57a); }
+    .feature-box-text-icon {
+      background-image: linear-gradient(to right, #7ed56f, #5643fa); }
   .feature-box-text-2 {
     display: inline-block;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to right, #55c57a, #000); }
+    background-image: linear-gradient(to right, #777, #55c57a); }
+    .feature-box-text-2-2 {
+      background-image: linear-gradient(to right, #55c57a, #000); }
+    .feature-box-text-2-3 {
+      background-image: linear-gradient(to right, #000, #55c57a); }
+    .feature-box-text-2-4 {
+      background-image: linear-gradient(to left, #777, #55c57a); }
+    .feature-box-text-2-icon {
+      background-image: linear-gradient(to right, #7ed56f, #5643fa); }
   .feature-box-text-3 {
     display: inline-block;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to right, #000, #55c57a); }
+    background-image: linear-gradient(to right, #777, #55c57a); }
+    .feature-box-text-3-2 {
+      background-image: linear-gradient(to right, #55c57a, #000); }
+    .feature-box-text-3-3 {
+      background-image: linear-gradient(to right, #000, #55c57a); }
+    .feature-box-text-3-4 {
+      background-image: linear-gradient(to left, #777, #55c57a); }
+    .feature-box-text-3-icon {
+      background-image: linear-gradient(to right, #7ed56f, #5643fa); }
   .feature-box-text-4 {
     display: inline-block;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to left, #777, #55c57a); }
+    background-image: linear-gradient(to right, #777, #55c57a); }
+    .feature-box-text-4-2 {
+      background-image: linear-gradient(to right, #55c57a, #000); }
+    .feature-box-text-4-3 {
+      background-image: linear-gradient(to right, #000, #55c57a); }
+    .feature-box-text-4-4 {
+      background-image: linear-gradient(to left, #777, #55c57a); }
+    .feature-box-text-4-icon {
+      background-image: linear-gradient(to right, #7ed56f, #5643fa); }
 
 .card {
   perspective: 1500rem;
@@ -291,7 +331,7 @@ body {
       color: #777;
       background-color: #fff; }
     .card-side-1--front {
-      box-shadow: 0 2.5rem 3rem rgba(255, 119, 48, 0.8), 0 4.5rem 8rem rgba(85, 197, 122, 0.8); }
+      box-shadow: 0 4.5rem 9 rem rgba(255, 119, 48, 0.8); }
     .card-side-2--front {
       box-shadow: 0 4.5rem 8rem rgba(85, 197, 122, 0.8); }
     .card-side-3--front {
@@ -426,7 +466,7 @@ body {
     transform: translate(-50%, -50%); }
   .story:hover .story-img {
     transform: scale(1);
-    filter: blur(3px) brightness(87%) hue-rotate(50deg); }
+    filter: blur(3px) brightness(87%) sepia(40%); }
 
 .row {
   max-width: 114rem;
