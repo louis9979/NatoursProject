@@ -1,4 +1,24 @@
+.popup-close {
+  &:link,
+  &:visited {
+    color: $color-grey-light;
+    position: absolute;
+    top: -4.5rem;
+    right: -2.5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
 .popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -6,18 +26,52 @@
   left: 0;
   background-color: rgba($color-black, 0.8);
   z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.7s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
 
   &-content {
-    width: 75%;
-    background-color: $color-white;
-    height: 50rem;
-    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 75%;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    overflow: hidden;
     border-radius: 8px;
+  }
+
+  &-left {
+    width: 33.3333333%;
+    display: table-cell;
+  }
+
+  &-right {
+    width: 66.6666667%;
+    margin: 5rem 8rem;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+  }
+
+  &-img {
+    display: flex;
+    width: 100%;
+  }
+
+  &-text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-grey-light;
+
+    hyphens: auto;
   }
 }
