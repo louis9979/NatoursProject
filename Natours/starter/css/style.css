@@ -784,7 +784,10 @@ body {
   right: 6rem;
   border-radius: 50%;
   z-index: 202;
-  box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.1);
+  cursor: pointer; }
+  .navigation-button:hover {
+    transform: scale(0.8); }
 
 .navigation-background {
   height: 6rem;
@@ -793,10 +796,10 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#2998ff, #5643fa);
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.98), rgba(255, 119, 48, 0.98));
   z-index: 200;
   transition: transform 1.2s cubic-bezier(1, 1.75, 0.88, 0.45); }
-  .navigation-background:active, .navigation-background:hover {
+  .navigation-background:active {
     transform: scale(110); }
 
 .navigation-nav {
@@ -850,6 +853,36 @@ body {
 .navigation-checkbox:checked ~ .navigation-nav {
   width: 100%;
   opacity: 1; }
+
+.navigation-icon, .navigation-icon-1, .navigation-icon-2 {
+  position: relative;
+  transition: all 0.2s;
+  display: inline-block; }
+  .navigation-icon, .navigation-icon::before, .navigation-icon::after, .navigation-icon-1, .navigation-icon-1::before, .navigation-icon-1::after, .navigation-icon-2, .navigation-icon-2::before, .navigation-icon-2::after {
+    width: 55%;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
+    left: 1.5rem;
+    top: 1.5rem; }
+
+.navigation-button:hover .navigation-icon-1 {
+  top: 1.7rem; }
+
+.navigation-button:hover .navigation-icon {
+  top: 2.4rem; }
+
+.navigation-button:hover .navigation-icon-2 {
+  top: 1rem; }
+
+.navigationcheckbox:checked + .navigation-button:active .navigation-icon {
+  background-color: transparent; }
+
+.navigationcheckbox:checked + .navigation-button:active .navigation-icon-2::before {
+  transform: rotate(45deg); }
+
+.navigationcheckbox:checked + .navigation-button:active .navigation-icon::after {
+  transform: rotate(-45deg); }
 
 .section-about {
   background-color: #f7f7f7;
