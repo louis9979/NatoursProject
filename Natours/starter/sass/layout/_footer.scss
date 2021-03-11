@@ -1,5 +1,5 @@
 .footer {
-  background-color: $color-grey-dark3;
+  background-color: $color-grey-dark-3;
   padding: 4rem 4rem 10rem 4rem;
   font-size: 1.4rem;
   display: flex;
@@ -10,7 +10,7 @@
   &-link {
     &:link,
     &:visited {
-      color: $color-grey-light1;
+      color: $color-grey-light-1;
       text-decoration: none;
       text-transform: uppercase;
       transform: rotate(10deg);
