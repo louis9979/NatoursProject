@@ -1,16 +1,19 @@
 .bg-video {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  height: 95%;
-  width: 96.8%;
+  height: 100%;
+  width: 100%;
   z-index: -1;
   opacity: 0.3;
   overflow: hidden;
-  margin-left: 3rem;
+
+  &-fixed {
+    position: fixed;
+  }
 
   &-content {
-    height: 95%;
+    height: 100%;
     width: 100%;
     object-fit: cover;
   }

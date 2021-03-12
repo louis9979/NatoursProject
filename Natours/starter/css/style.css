@@ -1,3 +1,17 @@
+/* 
+0-600PX: PHONE
+600-900PX: TABLET PORTRAIT 
+900-1200PX: TABLET LANDSCAPE 
+(1200-1800PX): NORMAL STYLES APPLY 
+1800PX+ : BIG DESKTOP 
+*/
+/*
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 *,
 *::after,
 *::before {
@@ -7,6 +21,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 900px) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 1200px) {
+    html {
+      font-size: 70%; } }
 
 body {
   box-sizing: border-box; }
@@ -488,17 +511,18 @@ body {
     filter: blur(3px) brightness(87%) sepia(40%); }
 
 .bg-video {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  height: 95%;
-  width: 96.8%;
+  height: 100%;
+  width: 100%;
   z-index: -1;
   opacity: 0.3;
-  overflow: hidden;
-  margin-left: 3rem; }
+  overflow: hidden; }
+  .bg-video-fixed {
+    position: fixed; }
   .bg-video-content {
-    height: 95%;
+    height: 100%;
     width: 100%;
     object-fit: cover; }
 
@@ -870,7 +894,7 @@ body {
 .section-features {
   padding: 30rem 0 11rem 0;
   background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(255, 119, 48, 0.8)), url(../img/nat-4.jpg);
-  background-size: 100%;
+  background-size: cover;
   transform: skewY(-7deg);
   margin-top: -20rem; }
   .section-features > * {
